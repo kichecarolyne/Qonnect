@@ -1,0 +1,104 @@
+const Technology=[
+    {
+        id:1,
+        name:'React',
+        icon:''
+    },
+    {
+        id:2,
+        name:'React Native'
+    },
+    {
+        id:3,
+        name:'Firebase'
+    },
+    {
+        id:4,
+        name:'Java'
+    },
+    {
+        id:5,
+        name:'Ruby'
+    },
+    {
+        id:6,
+        name:'PHP'
+    },
+    {
+        id:7,
+        name:'C++'
+    },
+    {
+        id:8,
+        name:'TypeScript'
+    },
+    {
+        id:9,
+        name:'Swift'
+    },
+    {
+        id:10,
+        name:'Angular'
+    },
+    {
+        id:11,
+        name:'Tailwind Css'
+    },
+    {
+        id:12,
+        name:'Next Js'
+    },
+    {
+        id:13,
+        name:'Expo'
+    },
+    {
+        id:14,
+        name:'Python'
+    },
+    {
+        id:15,
+        name:'Keras'
+    },
+    {
+        id:16,
+        name:'PyTorch'
+    },
+    {
+        id:17,
+        name:'Scikit-learn'
+    },
+    {
+        id:18,
+        name:'TensorFlow'
+    },
+    {
+        id:19,
+        name:'AI'
+    },
+    {
+        id:20,
+        name:'ML'
+    },
+    {
+        id:21,
+        name:'Encryption'
+    },
+    {
+        id:22,
+        name:'Ethical Hacking'
+    },
+    {
+        id:23,
+        name:'Penetration Testing'
+    },
+    {
+        id:24,
+        name:'Other'
+    },
+
+]
+
+export default{
+    Technology
+}

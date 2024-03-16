@@ -1,0 +1,42 @@
+const Category=[
+    {
+        id:1,
+        title:'Test'
+    },
+    {
+        id:2,
+        title:'Tutorials'
+    },
+    {
+        id:3,
+        title:'Courses'
+    },
+    {
+        id:4,
+        title:'Mentors'
+    },
+    {
+        id:5,
+        title:'Jobs'
+    },
+    {
+        id:6,
+        title:'Collaborate'
+    },
+    {
+        id:7,
+        title:'AI/ML'
+    },
+    {
+        id:8,
+        title:'Hacking'
+    },
+    {
+        id:9,
+        title:'Events'
+    }
+]
+
+export default{
+    Category
+}
