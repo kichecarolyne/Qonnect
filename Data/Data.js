@@ -54,46 +54,66 @@ const Technology=[
     },
     {
         id:14,
-        name:'Python'
+        name:'Flutter'
     },
     {
         id:15,
-        name:'Keras'
+        name:'Unity 3D'
     },
     {
         id:16,
-        name:'PyTorch'
+        name:'Kotlin'
     },
     {
         id:17,
-        name:'Scikit-learn'
+        name:'Linux'
     },
     {
         id:18,
-        name:'TensorFlow'
+        name:'Python'
     },
     {
         id:19,
-        name:'AI'
+        name:'Keras'
     },
     {
         id:20,
-        name:'ML'
+        name:'PyTorch'
     },
     {
         id:21,
-        name:'Encryption'
+        name:'Scikit-learn'
     },
     {
         id:22,
-        name:'Ethical Hacking'
+        name:'TensorFlow'
     },
     {
         id:23,
-        name:'Penetration Testing'
+        name:'AI'
     },
     {
         id:24,
+        name:'ML'
+    },
+    {
+        id:25,
+        name:'Encryption'
+    },
+    {
+        id:26,
+        name:'Ethical Hacking'
+    },
+    {
+        id:27,
+        name:'Penetration Testing'
+    },
+    {
+        id:28,
+        name:'Social Engineering'
+    },
+    {
+        id:29,
         name:'Other'
     },
 

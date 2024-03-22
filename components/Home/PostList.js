@@ -1,22 +1,35 @@
+// PostList.js
 import React, { useEffect, useState } from 'react';
 import Data1 from '@/Data/Data1';
 
-function PostList() {
-  const [posts, setPosts] = useState([]);
+function PostList({ filteredPosts, handlePostClick }) {
+    const [selectedCategory, setSelectedCategory] = useState(null);
 
-  useEffect(() => {
-    setPosts(Data1.Category);
-  }, []);
+    // Function to filter posts based on the selected category
+    const filterPostsByCategory = (category) => {
+        setSelectedCategory(category);
+    };
 
-  return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 justify-center sm:flex flex-wrap justify-center my-10'>
-      {posts.map((item) => (
-        <div className='cursor-pointer' key={item.id}>
-          <h2 className='text-[16px] text-center hover:underline'>{item.title}</h2>
+    return (
+        <div className='flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10 my-10'>
+            {Data1.Category.map((category, index) => (
+                <div
+                    className='cursor-pointer'
+                    key={index}
+                    onClick={() => filterPostsByCategory(category.title)}
+                >
+                    <h2 className={`text-[16px] text-center hover:underline ${selectedCategory === category.title ? 'text-blue-500' : ''}`}>
+                        {category.title}
+                    </h2>
+                </div>
+            ))}
+            {filteredPosts && filteredPosts.map((post) => (
+                <div className='cursor-pointer' key={post.id} onClick={() => handlePostClick(post)}>
+                    <h2 className='text-[16px] text-center hover:underline'>{post.title}</h2>
+                </div>
+            ))}
         </div>
-      ))}
-    </div>
-  );
+    );
 }
 
 export default PostList;

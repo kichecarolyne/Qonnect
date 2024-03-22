@@ -21,18 +21,26 @@ const Category=[
     },
     {
         id:6,
-        title:'Collaborate'
+        title:'Blogs'
     },
     {
         id:7,
-        title:'AI/ML'
+        title:'Collaborate'
     },
     {
         id:8,
-        title:'Hacking'
+        title:'AI/ML'
     },
     {
         id:9,
+        title:'Hacking'
+    },
+    {
+        id:10,
+        title:'Gaming'
+    },
+    {
+        id:11,
         title:'Events'
     }
 ]

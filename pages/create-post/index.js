@@ -58,6 +58,13 @@ function CreatePost() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       setShowToast(true);
+
+      const maxSizeInBytes = 5 * 1261 * 527; // 5 MB
+      if (file.size > maxSizeInBytes) {
+        console.error("File size exceeds the limit.");
+        return;
+      }
+
       const storageRef = ref(storage, 'connect-posts/'+file?.name);
       uploadBytes(storageRef, file).then((snapshot) => {
           console.log('Uploaded a blob or file!');
@@ -67,6 +74,9 @@ function CreatePost() {
               setInputs((values)=>({...values,
                   image:url}));          
               setSubmit(true);
+
+              // Redirect to the profile page after submitting
+              router.push('/profile');
   
           }) 
         }) ;
@@ -158,6 +168,16 @@ function CreatePost() {
         onChange={handleChange}
         placeholder="Write Description here"
       />
+      {/* Textarea for additional post details */}
+      <textarea
+        name="additionalDetails"
+        className="w-full mb-4 
+        outline-blue-400 border-[1px] 
+        p-2 rounded-md"
+        onChange={handleChange}
+        placeholder="Additional Post Details"
+        style={{ height: '150px' }}
+      />
       <input
           type="date"
           name="date"
@@ -171,6 +191,13 @@ function CreatePost() {
           onChange={handleChange}
           className="w-full mb-4 border-[1px] p-2 rounded-md"
         />
+        <input
+        type="text"
+        placeholder="Link Url"
+        name="link"
+        onChange={handleChange}
+        className="w-full mb-4 border-[1px] p-2 rounded-md"
+      />
       <h2 className="mb-3 font-bold">Select Tools & Technologies</h2>
       <div className="grid grid-cols-2 mb-4 md:grid-cols-3  ">
         {Data.Technology.map((item,index) => (
@@ -241,7 +268,7 @@ function CreatePost() {
         <input
           type="file"
           onChange={(e)=>setFile(e.target.files[0])}
-          accept="image/gif, image/jpeg, image/png"
+          accept="image/gif, image/jpeg, image/png, .png"
           className="mb-5 border-[1px] w-full"
         />
        {/* Render submit button only if the user is logged in */}
