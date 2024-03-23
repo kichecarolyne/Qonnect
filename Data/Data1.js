@@ -41,6 +41,10 @@ const Category=[
     },
     {
         id:11,
+        title:'Hackathons'
+    },
+    {
+        id:12,
         title:'Events'
     }
 ]

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.edit-field {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  
+  .edit-field:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  .edit-mode {
+    cursor: text; /* Change cursor to text when in edit mode */
+  }
+  
+  

@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function Search({ onSearch }) {
   const [searchText, setSearchText] = useState('');
 
   const handleSearch = () => {
-    // Call the onSearch function with the searchText as argument
-    onSearch(searchText);
+    console.log("Search button clicked");
+    // Ensure onSearch is a function before calling it
+    if (typeof onSearch === 'function') {
+      onSearch(searchText);
+    }
   };
+  
 
   return (
     <form className="max-w-xl mx-auto">
@@ -21,7 +26,7 @@ function Search({ onSearch }) {
           <input 
             type="search" 
             onChange={(e) => setSearchText(e.target.value)} 
-            value={searchText} // Bind input value to searchText state
+            value={searchText}
             id="default-search" 
             className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             placeholder="Search Tutorials, Courses, Events..." 
@@ -29,7 +34,7 @@ function Search({ onSearch }) {
           />
           <button 
             type="button" 
-            onClick={handleSearch} // Call handleSearch when button is clicked
+            onClick={handleSearch}
             className="text-white absolute end-2.5 bottom-2.5 bg-blue-300 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Search
@@ -39,5 +44,9 @@ function Search({ onSearch }) {
     </form>
   );
 }
+
+Search.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
 
 export default Search;

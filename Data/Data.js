@@ -90,30 +90,42 @@ const Technology=[
     },
     {
         id:23,
-        name:'AI'
+        name:'Software Development'
     },
     {
         id:24,
-        name:'ML'
+        name:'Web Development'
     },
     {
         id:25,
-        name:'Encryption'
+        name:'Software Engineering'
     },
     {
         id:26,
-        name:'Ethical Hacking'
+        name:'AI'
     },
     {
         id:27,
-        name:'Penetration Testing'
+        name:'ML'
     },
     {
         id:28,
-        name:'Social Engineering'
+        name:'Encryption'
     },
     {
         id:29,
+        name:'Ethical Hacking'
+    },
+    {
+        id:30,
+        name:'Penetration Testing'
+    },
+    {
+        id:31,
+        name:'Social Engineering'
+    },
+    {
+        id:32,
         name:'Other'
     },
 

@@ -32,9 +32,10 @@ function MyPosts() {
     }
   };
 
-  const onDeletePost = async id => {
+  const onDeletePost = async (id, event) => {
+    event.stopPropagation(); // Prevent the click event from propagating
     await deleteDoc(doc(db, 'posts', id));
-    setShowToast(false); // Set showToast to true when post is deleted
+    setShowToast(true); // Set showToast to true when post is deleted
     setUserPost(userPost => userPost.filter(post => post.id !== id)); // Remove the deleted post from state
   };
 
@@ -44,18 +45,18 @@ function MyPosts() {
   };
 
   return (
-    <div className="p-6 mt-8">
+    <div className="p-6 mt-8 flex justify-center">
       {showToast && ( // Conditionally render the Toast component
         <div className="absolute top-10 right-10">
           <Toast msg={'Post Deleted Successfully'} closeToast={() => setShowToast(false)} />
         </div>
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5 px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 px-10">
         {userPost &&
           userPost.map((item, index) => (
-            <div key={index} onClick={() => onPostClick(item)}> {/* Set onClick event to trigger onPostClick */}
+            <div key={index} className='flex flex-col items-center' onClick={() => onPostClick(item)}> {/* Set onClick event to trigger onPostClick */}
               <PostItem post={item} />
-              <button className="bg-red-500 text-white px-4 py-2 rounded mt-2" onClick={() => onDeletePost(item.id)}>Delete</button>
+              <button className="bg-red-500 text-white px-4 py-2 rounded mt-2" onClick={(e) => onDeletePost(item.id, e)}>Delete</button>
             </div>
           ))}
       </div>

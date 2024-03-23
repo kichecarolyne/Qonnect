@@ -70,9 +70,21 @@ function PostItem({ post, placeholderImage, onClick, onReadMoreClick, modal = fa
                     {post.location}
                 </div>
                 <div className="flex items-center mb-3 text-gray-700 dark:text-gray-400 cursor-pointer hover:underline line-clamp-1">
-                    <HiOutlineLink className="w-5 h-5 mr-1 text-[20px]" />
-                    <a href={post.link} target="_blank" rel="noopener noreferrer">{post.link}</a>
-                </div>
+                <HiOutlineLink className="w-5 h-5 mr-1 text-[20px]" />
+                <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        maxWidth: '200px',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                    }}
+                >
+                    {post.link}
+                </a>
+            </div>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-1">{post.desc}</p>
                 <a
                     href="#"

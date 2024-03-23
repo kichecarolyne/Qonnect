@@ -14,12 +14,13 @@ function Footer() {
           <div className="center content flex-1">
             <div>Jobs</div>
             <div>Blogs</div>
-            <div>Collaborate</div>  
+            <div>Collaborate</div>
+            <div>AI/ML</div> 
           </div>
           <div className="right content flex-1">
-            <div>AI/ML</div>
             <div>Hacking</div>
             <div>Gaming</div>
+            <div>Hackathons</div>
             <div>Events</div>
           </div>
         </div>
