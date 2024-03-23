@@ -65,7 +65,7 @@ function CreatePost() {
         return;
       }
 
-      const storageRef = ref(storage, 'connect-posts/'+file?.name);
+      const storageRef = ref(storage, 'qonnect-posts/'+file?.name);
       uploadBytes(storageRef, file).then((snapshot) => {
           console.log('Uploaded a blob or file!');
         }).then(resp=>{

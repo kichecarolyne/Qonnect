@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -8,12 +7,12 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API,
-  authDomain: "next-project-94cf0.firebaseapp.com",
-  projectId: "next-project-94cf0",
-  storageBucket: "next-project-94cf0.appspot.com",
-  messagingSenderId: "703180456634",
-  appId: "1:703180456634:web:7381ef924810fa97afb883",
-  measurementId: "G-9GPM11RLPF"
+  authDomain: "qonnect-project.firebaseapp.com",
+  projectId: "qonnect-project",
+  storageBucket: "qonnect-project.appspot.com",
+  messagingSenderId: "481863349370",
+  appId: "1:481863349370:web:1d877fb71f809a6ea577c3",
+  measurementId: "G-Y0BQ9FPLNQ"
 };
 
 // Initialize Firebase
