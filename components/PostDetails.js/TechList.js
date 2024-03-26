@@ -15,8 +15,8 @@ function TechList() {
           </h2>
         ))}
       </div>
-      <div className='w-[500px]'>
-        <h2 className='font-bold text-[18px] mt-6'>Source/Links</h2>
+      <div className='w-[500px] mt-5'>
+        <h2 className='font-bold text-[18px]'>Source/Links</h2>
         {selectedPost?.['app-demo-url'] && (
           <h2 className='font-light mt-4 cursor-pointer' onClick={() => window.open(selectedPost['app-demo-url'])}>
             {selectedPost['app-demo-url']}

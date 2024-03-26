@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import SearchPage from './SearchPage';
 
 function Search({ onSearch }) {
-  const [searchText, setSearchText] = useState('');
+  const [query, setQuery] = useState('');
+  const router = useRouter();
 
-  const handleSearch = () => {
-    console.log("Search button clicked");
-    // Ensure onSearch is a function before calling it
-    if (typeof onSearch === 'function') {
-      onSearch(searchText);
-    }
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log('Submitting search query:', query); // Log the query before redirecting
+    router.push(`/searchpage?query=${query}`);
   };
-  
+
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    console.log('Input value changed:', inputValue); // Log the input value when it changes
+    setQuery(inputValue);
+  };
 
   return (
-    <form className="max-w-xl mx-auto">
+    <form onSubmit={submitHandler} className="max-w-xl mx-auto">
       <div className="my-8">  
         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div className="relative">
@@ -25,16 +30,14 @@ function Search({ onSearch }) {
           </div>
           <input 
             type="search" 
-            onChange={(e) => setSearchText(e.target.value)} 
-            value={searchText}
+            onChange={handleInputChange} // Call handleInputChange when input changes
             id="default-search" 
             className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-gray dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             placeholder="Search Tutorials, Courses, Events..." 
             required 
           />
           <button 
-            type="button" 
-            onClick={handleSearch}
+            type="submit" 
             className="text-white absolute end-2.5 bottom-2.5 bg-blue-300 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Search
@@ -44,9 +47,5 @@ function Search({ onSearch }) {
     </form>
   );
 }
-
-Search.propTypes = {
-  onSearch: PropTypes.func.isRequired,
-};
 
 export default Search;

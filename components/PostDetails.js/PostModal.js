@@ -48,6 +48,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editedPost, setEditedPost] = useState(post);
 
+
   useEffect(() => {
     getUserPost();
   }, [showModal, session]);
@@ -72,6 +73,14 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
       document.body.style.overflow = 'auto'; // Reset overflow property on unmount
     };
   }, [showModal]);
+
+  useEffect(() => {
+    // Update the browser's search bar when the modal is opened
+    if (showModal) {
+      const url = `/${post.userName}/${post.categoryList}/${post.id}`;
+      window.history.replaceState(null, null, url);
+    }
+  }, [showModal, post]);
 
   const getUserPost = async () => {
     setUserPosts([]);
@@ -187,7 +196,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
     <>
       {showModal && (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none ml-6">
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none mx-auto ml-6">
             <div className="relative w-full my-6 mx-auto max-w-4xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-800 outline-none focus:outline-none text-white"
                 style={{
@@ -211,7 +220,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
                   <div>
                   <PostInfo post={post} isEditing={isEditing} handleFieldChange={handleFieldChange} />
                   </div>
-                  <div className="mb-14">
+                  <div className="mb-36">
                     <TechList post={post} />
                   </div>
                   <div className="mb-20">

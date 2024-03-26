@@ -13,7 +13,7 @@ const Category=[
     },
     {
         id:4,
-        title:'Mentors'
+        title:'Mentorship'
     },
     {
         id:5,
@@ -33,7 +33,7 @@ const Category=[
     },
     {
         id:9,
-        title:'Hacking'
+        title:'Cyber Security'
     },
     {
         id:10,

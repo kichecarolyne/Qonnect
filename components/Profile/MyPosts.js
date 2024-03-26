@@ -24,11 +24,15 @@ function MyPosts() {
     if (session?.user.email) {
       const q = query(collection(db, 'posts'), where('email', '==', session?.user.email));
       const querySnapshot = await getDocs(q);
+      const posts = [];
       querySnapshot.forEach(doc => {
         let data = doc.data();
         data.id = doc.id;
-        setUserPost(userPost => [...userPost, data]);
+        posts.push(data);
       });
+      // Sort posts based on submission time (assuming submissionTime is a timestamp field)
+      posts.sort((a, b) => b.submissionTime - a.submissionTime);
+      setUserPost(posts.reverse()); // Reverse the order of posts
     }
   };
 
@@ -51,7 +55,7 @@ function MyPosts() {
           <Toast msg={'Post Deleted Successfully'} closeToast={() => setShowToast(false)} />
         </div>
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-10">
         {userPost &&
           userPost.map((item, index) => (
             <div key={index} className='flex flex-col items-center' onClick={() => onPostClick(item)}> {/* Set onClick event to trigger onPostClick */}

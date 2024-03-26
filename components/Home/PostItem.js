@@ -54,7 +54,7 @@ function PostItem({ post, placeholderImage, onClick, onReadMoreClick, modal = fa
     }
 
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer w-full">
+        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer w-full" style={{ height: '450px' }}>
             <div className="h-[180px]">
                 {post.image && <img className="rounded-t-lg w-full h-full object-cover" src={post.image} alt="" />}
                 {!post.image && <div className="bg-gray-500 rounded-t-lg w-full h-full" />} {/* Placeholder for no image */}
@@ -65,7 +65,14 @@ function PostItem({ post, placeholderImage, onClick, onReadMoreClick, modal = fa
                     <HiOutlineCalendar className="w-5 h-5 mr-1 text-[20px]" />
                     {post.date}
                 </div>
-                <div className="flex items-center mb-3 text-gray-700 dark:text-gray-400 cursor-pointer">
+                <div className="flex items-center mb-3 text-gray-700 dark:text-gray-400 cursor-pointer" style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 1, /* Number of lines to show */
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    maxWidth: '200px', /* Limiting the width to ensure ellipsis shows up */
+                }}>
                     <HiOutlineLocationMarker className="w-5 h-5 mr-1 text-[20px]" />
                     {post.location}
                 </div>

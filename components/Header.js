@@ -10,6 +10,11 @@ function Header() {
     const { data: session } = useSession();
     const router = useRouter();
 
+    const handleSignOut = async () => {
+        await signOut();
+        router.push('/');
+    };
+
     return (
         <div className='sticky top-0 z-50 flex justify-between p-3 border-b-[2px] border-[#ff3366] bg-blue-500 text-white border-white'>
             <a href='/' onClick={() => router.push('/')} ><h2 className='logo text-[20px] font-bold'>QONNECT</h2></a>

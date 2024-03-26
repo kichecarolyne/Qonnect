@@ -21,7 +21,8 @@ function Posts({ posts }) {
     const postsPerPage = 9;
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    let currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    currentPosts = currentPosts.reverse(); // Reverse the array to display most recent posts at the top
 
     return (
         <div>

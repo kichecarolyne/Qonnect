@@ -65,7 +65,7 @@ function CreatePost() {
         return;
       }
 
-      const storageRef = ref(storage, 'qonnect-posts/'+file?.name);
+      const storageRef = ref(storage, 'connect-posts/'+file?.name);
       uploadBytes(storageRef, file).then((snapshot) => {
           console.log('Uploaded a blob or file!');
         }).then(resp=>{
@@ -120,13 +120,19 @@ function CreatePost() {
         }
     }
 
-    useEffect(()=>{
-        setInputs((values)=>({
-            ...values,['categoryList']:categoryList
-        }))
-        
-    },[categoryList])
-
+    useEffect(() => {
+      if (session) {
+          setInputs((values) => ({
+              ...values,
+              userName: session.user?.name,
+              userImage: session.user?.image,
+              email: session.user?.email,
+              id: docId,
+              techList: techList,
+              categoryList: categoryList,
+          }));
+      }
+  }, [session, docId, techList, categoryList]);
 
   return (
     <div
