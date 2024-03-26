@@ -1,40 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Documentation: Qonnect
 
-## Getting Started
+Table of Contents:
 
-First, run the development server:
+Introduction
+Project Overview
+Features
+Technologies Used
+Installation Guide
+Usage Guide
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Introduction:
+Qonnect is an all-in-one developer hub designed to empower developers by providing a platform for testing websites, collaborating on projects, sharing courses, mentoring, staying updated with relevant events within the developer community and so much more.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2. Project Overview:
+Qonnect serves as a central platform for developers to test their websites, seek feedback from peers, participate in tutoring sessions, share educational courses, mentor others, collaborate on projects, and discover upcoming events. The project aims to enhance collaboration, communication, and knowledge sharing within the developer community, fostering personal and professional growth.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Features:
+Website testing and feedback mechanism
+Collaborations
+Course sharing and educational resources
+One-on-one tutoring and mentoring sessions
+Event postings
+User authentication and authorization
+Real-time communication and updates
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Technologies Used:
+Frontend: Next.js, React
+Backend: Next.js, Firebase
+Authentication: Next Auth
+UI Frameworks: Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Installation Guide:
+Clone the Qonnect repository from GitHub:
 
-## Learn More
+Go to the Qonnect repository on GitHub.
+Click on the "Code" button and copy the repository URL.
+Open your terminal or command prompt.
+Navigate to the directory where you want to clone the repository.
 
-To learn more about Next.js, take a look at the following resources:
+Run the following command:
+git clone [repository URL]
+Wait for the cloning process to complete.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to the project directory:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Use the cd command to change directory into the newly cloned Qonnect repository.
+For example:
+cd qonnect
 
-## Deploy on Vercel
+Install dependencies using npm or yarn:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you're using npm, run:
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you're using yarn, run:
+yarn install
+
+This will install all the necessary dependencies specified in the package.json file.
+
+Set up a Firebase project and obtain necessary API keys:
+
+Go to the Firebase console and create a new project.
+Follow the instructions to set up Firebase for your project.
+Obtain the Firebase configuration object containing the API keys, which includes values such as apiKey, authDomain, projectId, etc.
+
+Configure Next Auth for authentication:
+
+Create a file named .env file in the project directory.
+Add your Firebase configuration object obtained in the previous step.
+Configure Next Auth with Firebase authentication provider.
+Save the changes to the .env file.
+
+Run the project locally using npm start or yarn start:
+
+After completing all the above steps, you can run the project locally.
+
+Use either npm or yarn to start the development server.
+If you're using npm, run:
+npm start
+
+If you're using yarn, run:
+yarn start
+
+Open your web browser and navigate to the URL where the project is hosted locally (usually http://localhost:3000).
+
+Following these steps should successfully set up and run the Qonnect project locally on your machine.
+
+6. Usage Guide:
+Sign into Qonnect with your github account or sign up for one.
+Explore available features such as website testing, collaboration, course sharing, mentoring sessions, and event postings.
+Engage with the community by providing feedback, participating in discussions, and sharing knowledge.
+Stay updated with relevant events and notifications.
