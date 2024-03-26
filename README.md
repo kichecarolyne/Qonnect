@@ -1,15 +1,5 @@
 Project Documentation: Qonnect
 
-Table of Contents:
-
-Introduction
-Project Overview
-Features
-Technologies Used
-Installation Guide
-Usage Guide
-
-
 1. Introduction:
 Qonnect is an all-in-one developer hub designed to empower developers by providing a platform for testing websites, collaborating on projects, sharing courses, mentoring, staying updated with relevant events within the developer community and so much more.
 
