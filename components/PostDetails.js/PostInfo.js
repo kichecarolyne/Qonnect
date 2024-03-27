@@ -18,14 +18,13 @@ const PostInfo = ({
     // Define showAdditionalDetails state and setShowAdditionalDetails function
     const [showAdditionalDetails, setShowAdditionalDetails] = useState(false);
 
-    // Make sure selectedPost exists before accessing its properties
     if (!selectedPost) {
-        return null; // Handle the case when selectedPost is not available
+        return null;
     }
 
     const handleInputChange = (field, value) => {
         const updatedPost = { ...selectedPost, [field]: value };
-        handleFieldChange(updatedPost); // Pass the updated post to the parent component
+        handleFieldChange(updatedPost);
     };
 
     return (

@@ -7,7 +7,7 @@ function Profile() {
   const [bio, setBio] = useState('');
   return (
     <div className='px-10'>
-      <UserInfo bio={bio} setBio={setBio} /> {/* Pass bio state and setBio function as props */}
+      <UserInfo bio={bio} setBio={setBio} />
       <PostModal />
     </div>
   );

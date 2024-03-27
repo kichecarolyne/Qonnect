@@ -59,7 +59,7 @@ function CreatePost() {
       e.preventDefault();
       setShowToast(true);
 
-      const maxSizeInBytes = 5 * 1261 * 527; // 5 MB
+      const maxSizeInBytes = 5 * 1261 * 527;
       if (file.size > maxSizeInBytes) {
         console.error("File size exceeds the limit.");
         return;

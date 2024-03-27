@@ -49,7 +49,7 @@ export default function Home() {
         totalPosts={posts.length}
         paginate={paginate}
       />
-      <Footer />
+      <Footer className="footer"/>
     </div>
   );
 }

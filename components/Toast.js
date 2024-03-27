@@ -5,7 +5,7 @@ function Toast({ msg = '', closeToast }) {
     useEffect(() => {
         const timeout = setTimeout(() => {
             closeToast();
-        }, 3000); // Adjust the duration (in milliseconds) as needed
+        }, 3000);
         return () => clearTimeout(timeout);
     }, [closeToast]);
 

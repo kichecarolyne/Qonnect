@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-export const SelectedPostContext = createContext(); // Named export for the context
+export const SelectedPostContext = createContext();
 
 export const useSelectedPost = () => useContext(SelectedPostContext);
 

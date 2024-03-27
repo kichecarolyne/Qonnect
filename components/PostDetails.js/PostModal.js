@@ -68,9 +68,8 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
     // Call handleScrolling when showModal state changes
     handleScrolling(showModal);
 
-    // Cleanup function to reset scrolling behavior when component unmounts
     return () => {
-      document.body.style.overflow = 'auto'; // Reset overflow property on unmount
+      document.body.style.overflow = 'auto';
     };
   }, [showModal]);
 
@@ -175,7 +174,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
   };
 
   const handleEditButtonClick = () => {
-    // Set the state variables to enable editing
+    // State variables to enable editing
     setIsEditing(true);
     setTitleClicked(true);
     setDescriptionClicked(true);
@@ -186,8 +185,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
   };
 
   const handleSaveButtonClick = () => {
-    // Implement your save logic here
-    updatePost(); // Call updatePost to update the post
+    updatePost();
     setIsEditing(false);
   };
   
@@ -200,16 +198,15 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
             <div className="relative w-full my-6 mx-auto max-w-4xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-800 outline-none focus:outline-none text-white"
                 style={{
-                // Adjust modal width and height for different screen sizes
                 maxWidth: "90vw", // Default width for smaller screens
-                maxHeight: "100vh", // Default height for smaller screens
+                maxHeight: "100vh",
                 "@media (min-width: 768px)": {
-                  maxWidth: "70vw", // Adjust width for medium screens
-                  maxHeight: "70vh", // Adjust height for medium screens
+                  maxWidth: "70vw",
+                  maxHeight: "70vh",
                 },
                 "@media (min-width: 1024px)": {
-                  maxWidth: "50vw", // Adjust width for large screens
-                  maxHeight: "60vh", // Adjust height for large screens
+                  maxWidth: "50vw",
+                  maxHeight: "60vh",
                 },
               }}
             >
@@ -264,7 +261,7 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
                       <button
                         className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
-                        onClick={handleEditButtonClick} // Call handleEditButtonClick on click
+                        onClick={handleEditButtonClick}
                       >
                         Edit
                       </button>
@@ -273,8 +270,8 @@ function PostModal({ showModal, setShowModal, post, inProfile }) {
                         className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => {
-                          updatePost(); // Call updatePost to update the post
-                          setShowModal(false); // Close the modal after updating the post
+                          updatePost();
+                          setShowModal(false);
                         }}
                       >
                         Save

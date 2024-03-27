@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { searchPosts } from './utils/searchPosts'; // Import the searchPosts function
+import { searchPosts } from './utils/searchPosts';
 
 function SearchResults() {
   const [results, setResults] = useState([]);
@@ -7,10 +7,10 @@ function SearchResults() {
   const [searching, setSearching] = useState(false);
 
   const handleSearch = async () => {
-    setSearching(true); // Set searching state to true when search starts
-    const searchResults = await searchPosts(searchTerm); // Corrected function call
+    setSearching(true);
+    const searchResults = await searchPosts(searchTerm);
     setResults(searchResults);
-    setSearching(false); // Set searching state to false when search is completed
+    setSearching(false);
   };
 
   return (

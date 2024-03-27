@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/global.css'
 
 function Footer() {
   return (
@@ -6,22 +7,22 @@ function Footer() {
       <div className="container mx-auto p-3">
         <div className="flex justify-between items-center text-white">
           <div className="left content flex-1">
-            <div>Test</div>
-            <div>Tutorials</div>
-            <div>Courses</div>
-            <div>Mentors</div>
+            <a href="#" className="footer-link">Test</a>
+            <a href="#" className="footer-link">Tutorials</a>
+            <a href="#" className="footer-link">Courses</a>
+            <a href="#" className="footer-link">Mentors</a>
           </div>
           <div className="center content flex-1">
-            <div>Jobs</div>
-            <div>Blogs</div>
-            <div>Collaborate</div>
-            <div>AI/ML</div> 
+            <a href="#" className="footer-link">Jobs</a>
+            <a href="#" className="footer-link">Blogs</a>
+            <a href="#" className="footer-link">Collaborate</a>
+            <a href="#" className="footer-link">AI/ML</a> 
           </div>
           <div className="right content flex-1">
-            <div>Hacking</div>
-            <div>Gaming</div>
-            <div>Hackathons</div>
-            <div>Events</div>
+            <a href="#" className="footer-link">Hacking</a>
+            <a href="#" className="footer-link">Gaming</a>
+            <a href="#" className="footer-link">Hackathons</a>
+            <a href="#" className="footer-link">Events</a>
           </div>
         </div>
       </div>

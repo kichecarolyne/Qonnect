@@ -1,5 +1,3 @@
-// firestoreUtils.js
-
 // Import necessary functions and objects from Firestore module
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../../Shared/firebaseConfig';
