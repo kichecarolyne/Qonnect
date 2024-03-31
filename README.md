@@ -1,12 +1,12 @@
 Project Documentation: Qonnect
 
-1. Introduction:
+Introduction:
 Qonnect is an all-in-one developer hub designed to empower developers by providing a platform for testing websites, collaborating on projects, sharing courses, mentoring, staying updated with relevant events within the developer community and so much more.
 
-2. Project Overview:
+Project Overview:
 Qonnect serves as a central platform for developers to test their websites, seek feedback from peers, participate in tutoring sessions, share educational courses, mentor others, collaborate on projects, and discover upcoming events. The project aims to enhance collaboration, communication, and knowledge sharing within the developer community, fostering personal and professional growth.
 
-3. Features:
+Features:
 Website testing and feedback mechanism
 Collaborations
 Course sharing and educational resources
@@ -15,13 +15,13 @@ Event postings
 User authentication and authorization
 Real-time communication and updates
 
-4. Technologies Used:
+Technologies Used:
 Frontend: Next.js, React
 Backend: Next.js, Firebase
 Authentication: Next Auth
 UI Frameworks: Tailwind CSS
 
-5. Installation Guide:
+Installation Guide:
 Clone the Qonnect repository from GitHub:
 
 Go to the Qonnect repository on GitHub.
@@ -77,7 +77,7 @@ Open your web browser and navigate to the URL where the project is hosted locall
 
 Following these steps should successfully set up and run the Qonnect project locally on your machine.
 
-6. Usage Guide:
+Usage Guide:
 Sign into Qonnect with your github account or sign up for one.
 Explore available features such as website testing, collaboration, course sharing, mentoring sessions, and event postings.
 Engage with the community by providing feedback, participating in discussions, and sharing knowledge.
